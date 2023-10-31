@@ -1,27 +1,25 @@
+'use strict';
 function getShippingCost(country) {
     let price;
     switch(country) {
         case `China`:
             price = 100;
-            return `Shipping to ${country} will cost ${price} credits`;
-            //break;
+            break;
         case `Chile`:
             price = 250;
-            return `Shipping to ${country} will cost ${price} credits`;
-            //break;
+            break;
         case `Australia`:
             price = 170;
-            return `Shipping to ${country} will cost ${price} credits`;
-            //break;
+            break;
         case `Jamaica`:
             price = 120;
-            return `Shipping to ${country} will cost ${price} credits`;
-            //break;
+            break;
         default:
             return `Sorry, there is no delivery to your country`;
         }
+    return `Shipping to ${country} will cost ${price} credits`;
 }
-//чи можна написати без break з return? Працюють обидва варіанти: і з break, і з return
+
 
 console.log(getShippingCost("Australia")); // "Shipping to Australia will cost 170 credits"
 console.log(getShippingCost("Germany")); // "Sorry, there is no delivery to your country"
